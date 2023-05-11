@@ -22,7 +22,7 @@ nomoisture = DigitalInputDevice(20)
 userID = 1
 timeToEnd = time_user
 name =""
-r = requests.post("http://api.nohles.dev/api/runs/create.php?userID="+ str(userID) +"&timeToEnd="+ str(timeToEnd)+"&runName="+ name  +"&macAddress="+str(macAddress))
+r = requests.post("http:// *website* /api/runs/create.php?userID="+ str(userID) +"&timeToEnd="+ str(timeToEnd)+"&runName="+ name  +"&macAddress="+str(macAddress))
 
 data = r.json()
 runID = data["runID"]
@@ -46,6 +46,6 @@ while True:
     print(ldr.value)
     print(norain.value)
     print(nomoisture.value)
-    requests.get("https://api.nohles.dev/api/sensor/create.php?temp="+str(temperature)+"&humidity="+str(humidity)+"&light="+str(ldr.value)+"&rain="+str(norain.value)+"&moisture="+str(nomoisture.value)+"&macAddress="+str(macAddress)+"&ru$
+    requests.get("https:// *website*  /api/sensor/create.php?temp="+str(temperature)+"&humidity="+str(humidity)+"&light="+str(ldr.value)+"&rain="+str(norain.value)+"&moisture="+str(nomoisture.value)+"&macAddress="+str(macAddress)+"&ru$
     sleep(5)
 
